@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import history from './utils/history';
 import configureStore from './redux/configureStore';
-import App from './containers/App/index.jsx';
+import App from './containers/App/index';
 
 // redux store with history
 const initialState = {};

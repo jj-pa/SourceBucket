@@ -4,10 +4,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks"
-  ],
+  "plugins": ["@typescript-eslint", "react-hooks"],
   // ESLint에 적용할 규칙 정의 (나중에 정의된 옵션일수록 높은 우선 순위)
   "extends": [
     "plugin:react/recommended",
