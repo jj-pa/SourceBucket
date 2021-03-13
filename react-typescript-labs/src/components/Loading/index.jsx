@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { withStyles } from "@material-ui/core";
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles } from '@material-ui/core';
 const styles = {
   circularProgress: {
-    position: "fixed",
-    top: "calc(50% - 45px)",
-    left: "calc(50% - 45px)",
+    position: 'fixed',
+    top: 'calc(50% - 45px)',
+    left: 'calc(50% - 45px)',
   },
 };
 

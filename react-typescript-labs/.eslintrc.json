@@ -8,9 +8,12 @@
     "@typescript-eslint",
     "react-hooks"
   ],
+  // ESLint에 적용할 규칙 정의 (나중에 정의된 옵션일수록 높은 우선 순위)
   "extends": [
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",

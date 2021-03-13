@@ -1,7 +1,7 @@
-import { connectRouter } from "connected-react-router";
-import { reducer as form } from "redux-form/immutable";
-import { combineReducers } from "redux";
-import history from "../utils/history";
+import { connectRouter } from 'connected-react-router';
+import { reducer as form } from 'redux-form/immutable';
+import { combineReducers } from 'redux';
+import history from '../utils/history';
 
 function branchReducer(reducerFunction, reducerName) {
   return (state, action) => {

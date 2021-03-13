@@ -1,6 +1,6 @@
-import React from "react";
-import { withStyles } from "@material-ui/core";
-import styles from "./appStyles-jss";
+import React from 'react';
+import { withStyles } from '@material-ui/core';
+import styles from './appStyles-jss';
 
 class LandingTemplate extends React.Component {
   state = {
@@ -9,12 +9,12 @@ class LandingTemplate extends React.Component {
 
   componentDidMount = () => {
     // Scroll content to top
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   };
 
   componentWillUnmount() {
     // const mainContent = document.getElementById('app');
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = () => {

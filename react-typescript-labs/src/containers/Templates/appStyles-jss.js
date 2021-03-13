@@ -1,25 +1,25 @@
-import { darken, lighten } from "@material-ui/core/styles/colorManipulator";
+import { darken, lighten } from '@material-ui/core/styles/colorManipulator';
 
 const appFrame = {
-  display: "flex",
-  width: "100%",
-  minHeight: "100%",
+  display: 'flex',
+  width: '100%',
+  minHeight: '100%',
   zIndex: 1,
 };
 
 const styles = (theme) => ({
   root: {
-    width: "100%",
+    width: '100%',
     marginTop: 0,
     zIndex: 1,
-    overflow: "auto",
+    overflow: 'auto',
   },
   blogWrap: {
-    position: "relative",
+    position: 'relative',
   },
   appFrameInner: {
     background:
-      theme.palette.type === "dark"
+      theme.palette.type === 'dark'
         ? darken(theme.palette.primary.dark, 0.8)
         : lighten(theme.palette.primary.light, 0.9),
     color: theme.palette.text.primary,
@@ -33,44 +33,44 @@ const styles = (theme) => ({
     minHeight: 1000,
   },
   appFrameSlider: {
-    display: "flex",
-    width: "100%",
-    height: "100%",
-    [theme.breakpoints.up("lg")]: {
-      position: "absolute",
-      overflow: "hidden",
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    [theme.breakpoints.up('lg')]: {
+      position: 'absolute',
+      overflow: 'hidden',
     },
     backgroundColor: theme.palette.background.default,
   },
   topNav: {
-    flexDirection: "column",
+    flexDirection: 'column',
   },
   sideNav: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   content: {
-    width: "100%",
+    width: '100%',
     padding: theme.spacing(2),
-    minHeight: "100%",
-    overflow: "hidden",
-    [theme.breakpoints.down("md")]: {
+    minHeight: '100%',
+    overflow: 'hidden',
+    [theme.breakpoints.down('md')]: {
       paddingLeft: theme.spacing(1),
       paddingRight: theme.spacing(1),
     },
   },
   outerContent: {
-    width: "100%",
-    backgroundSize: "cover",
-    flexDirection: "column",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    width: '100%',
+    backgroundSize: 'cover',
+    flexDirection: 'column',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   bgWrap: {
-    position: "fixed",
+    position: 'fixed',
     background: theme.palette.background.default,
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
     top: 0,
     left: 0,
   },
@@ -78,64 +78,64 @@ const styles = (theme) => ({
   halfBg: {},
   fullBg: {},
   bgbar: {
-    backgroundAttachment: "fixed",
-    width: "100%",
-    top: 0,
-    left: 0,
-    position: "absolute",
-    "&$headerBg": {
+    'backgroundAttachment': 'fixed',
+    'width': '100%',
+    'top': 0,
+    'left': 0,
+    'position': 'absolute',
+    '&$headerBg': {
       height: 64,
     },
-    "&$halfBg": {
+    '&$halfBg': {
       height: 400,
     },
-    "&$fullBg": {
-      height: "100%",
+    '&$fullBg': {
+      height: '100%',
     },
   },
   solidBg: {
-    backgroundColor:
-      theme.palette.type === "dark"
+    'backgroundColor':
+      theme.palette.type === 'dark'
         ? darken(theme.palette.primary.main, 0.4)
         : theme.palette.primary.main,
-    "&:before": {
+    '&:before': {
       content: "''",
-      width: "100%",
-      height: "100%",
-      position: "absolute",
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
       opacity: 0.1,
     },
   },
   sidebarLayout: {},
   topbarLayout: {},
   mainWrap: {
-    height: "100%",
-    position: "relative",
-    "& > div": {
-      willChange: "inherit !important", // hack for floating form issue when expaded
+    'height': '100%',
+    'position': 'relative',
+    '& > div': {
+      willChange: 'inherit !important', // hack for floating form issue when expaded
     },
-    "&$sidebarLayout": {
+    '&$sidebarLayout': {
       paddingTop: theme.spacing(8),
     },
-    "&$topbarLayout": {
-      width: "100%",
+    '&$topbarLayout': {
+      width: '100%',
       marginTop: theme.spacing(3),
     },
   },
   preloader: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
-    width: "100%",
+    width: '100%',
     zIndex: 1000,
-    background: "transparent",
+    background: 'transparent',
     height: 3,
   },
   materialBg: {
-    position: "absolute",
+    position: 'absolute',
     left: 0,
     bottom: 0,
-    width: "100%",
+    width: '100%',
     opacity: 0.5,
   },
   contentPaddingLeft: {
@@ -153,24 +153,24 @@ const styles = (theme) => ({
     paddingRight: theme.spacing(2),
   },
   hideApp: {
-    display: "none",
+    display: 'none',
   },
   circularProgress: {
-    position: "fixed",
-    top: "calc(50% - 45px)",
-    left: "calc(50% - 45px)",
+    position: 'fixed',
+    top: 'calc(50% - 45px)',
+    left: 'calc(50% - 45px)',
   },
   brand: {
-    height: 54,
-    display: "flex",
-    padding: "10px 10px 5px",
-    position: "relative",
-    alignItems: "center",
-    justifyContent: "center",
-    "& img": {
+    'height': 54,
+    'display': 'flex',
+    'padding': '10px 10px 5px',
+    'position': 'relative',
+    'alignItems': 'center',
+    'justifyContent': 'center',
+    '& img': {
       width: 20,
     },
-    "& h3": {
+    '& h3': {
       margin: 0,
       fontSize: 16,
       fontWeight: 500,
@@ -180,23 +180,23 @@ const styles = (theme) => ({
   },
   light: {},
   pageTitle: {
-    padding: theme.spacing(1),
-    paddingBottom: theme.spacing(3),
-    [theme.breakpoints.up("lg")]: {
-      display: "flex",
-      alignItems: "flex-end",
+    'padding': theme.spacing(1),
+    'paddingBottom': theme.spacing(3),
+    [theme.breakpoints.up('lg')]: {
+      display: 'flex',
+      alignItems: 'flex-end',
     },
-    "& h4": {
+    '& h4': {
       fontWeight: 700,
       fontSize: 24,
       paddingLeft: 10,
       paddingRight: theme.spacing(1),
-      textTransform: "capitalize",
+      textTransform: 'capitalize',
       color:
-        theme.palette.type === "dark"
+        theme.palette.type === 'dark'
           ? theme.palette.secondary.light
           : theme.palette.primary.dark,
-      [theme.breakpoints.down("md")]: {
+      [theme.breakpoints.down('md')]: {
         marginBottom: theme.spacing(3),
       },
     },
