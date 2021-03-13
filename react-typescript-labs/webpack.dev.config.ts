@@ -19,7 +19,7 @@ const config: webpack.Configuration = {
                         presets: [
                             "@babel/preset-env",
                             "@babel/preset-react",
-                            "@babel/preset-typescript",
+                            "@babel/preset-typescript"
                         ],
                     },
                 },
@@ -27,7 +27,7 @@ const config: webpack.Configuration = {
         ],
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js"],
+        extensions: [".tsx", ".ts", ".js", "jsx"],
     },
     plugins: [
         new HtmlWebpackPlugin({
