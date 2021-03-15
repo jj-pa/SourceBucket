@@ -6,7 +6,7 @@ const config: webpack.Configuration = {
   // 모드 설정
   mode: 'development',
   // 웹팩 빌드 진입점
-  entry: './src/App.tsx',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',

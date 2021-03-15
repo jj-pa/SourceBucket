@@ -1,14 +1,14 @@
 import Loadable from 'react-loadable';
-import Loading from '../components/Loading';
+import Loading from '../molecules/Loading';
 
 // Landing page
 export const HomePage = Loadable({
-  loader: () => import('./LandingPage/HomePage'),
+  loader: () => import('./Landing/HomePage'),
   loading: Loading,
 });
 
 // Other
 export const NotFound = Loadable({
-  loader: () => import('./NotFound/NotFound'),
+  loader: () => import('./NotFound'),
   loading: Loading,
 });

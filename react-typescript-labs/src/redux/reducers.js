@@ -1,7 +1,10 @@
+import { reducer as form } from 'redux-form';
 import { connectRouter } from 'connected-react-router';
-import { reducer as form } from 'redux-form/immutable';
 import { combineReducers } from 'redux';
 import history from '../utils/history';
+
+// global reducers
+import initval from './modules/initFormReducer';
 
 function branchReducer(reducerFunction, reducerName) {
   return (state, action) => {
@@ -17,6 +20,7 @@ function branchReducer(reducerFunction, reducerName) {
 export default function createReducer(injectedReducers = {}) {
   const rootReducer = combineReducers({
     form,
+    initval,
     router: connectRouter(history),
     ...injectedReducers,
   });

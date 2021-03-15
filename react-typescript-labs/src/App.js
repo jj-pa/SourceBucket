@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Landing from './Landing';
+import Landing from './components/pages/Landing';
 
 import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../../styles/theme';
+import theme from './styles/theme';
 
 class App extends React.Component {
   render() {

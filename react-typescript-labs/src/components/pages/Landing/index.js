@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import LandingTemplate from '../Templates/LandingTemplate';
+import LandingTemplate from '../../templates/Landing';
 import { HomePage, NotFound } from '../pageListAsync';
 
 class Landing extends React.Component {

@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { routerMiddleware } from 'connected-react-router';
 import createReducer from './reducers';
-import { fromJS } from 'immutable';
 import sagas from '../utils/sagas';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -22,10 +21,10 @@ export default function configureStore(initialState = {}, history) {
         })
       : compose;
 
-  /* exlint-enable */
+  /* eslint-enable */
   const store = createStore(
     createReducer(),
-    fromJS(initialState),
+    initialState,
     composeEnhancers(...enhancers)
   );
 
