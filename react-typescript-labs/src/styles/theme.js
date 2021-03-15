@@ -21,6 +21,11 @@ const theme = createMuiTheme({
     },
     white: 'white',
   },
+  rounded: {
+    small: '8px',
+    medium: '12px',
+    big: '20px',
+  },
 });
 
 export default theme;

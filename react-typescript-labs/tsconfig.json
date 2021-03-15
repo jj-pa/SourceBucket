@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5", // 컴파일 후 생성될 파일의 ECMAScript 버전
     "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
