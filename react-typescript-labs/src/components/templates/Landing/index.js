@@ -1,7 +1,4 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core';
-import styles from './appStyles-jss';
-import LandingHeader from '../../../components/organisms/LandingHeader';
 
 class LandingTemplate extends React.Component {
   state = {
@@ -28,13 +25,8 @@ class LandingTemplate extends React.Component {
   render() {
     const { classes, children } = this.props;
     const { transform } = this.state;
-    return (
-      <div id="mainContent">
-        <LandingHeader />
-        {children}
-      </div>
-    );
+    return <div id="mainContent">{children}</div>;
   }
 }
 
-export default withStyles(styles)(LandingTemplate);
+export default LandingTemplate;
