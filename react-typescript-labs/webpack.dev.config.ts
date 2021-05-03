@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+const Dotenv = require('dotenv-webpack');
 
 const config: webpack.Configuration = {
   // 모드 설정
@@ -37,6 +38,7 @@ const config: webpack.Configuration = {
     extensions: ['.js', '.json', '.ts', '.tsx'],
   },
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),

@@ -4,8 +4,11 @@ import { createInjectorsEnhancer } from 'redux-injectors';
 import { createRootReducer } from './reducer';
 import { rootSaga } from './saga';
 
+import { SearchState } from './containers/Search/types';
+
 export type ApplicationState = {
   // will hold state for each chunk/feature
+  search: SearchState;
 };
 
 function configureAppStore(initialState: ApplicationState) {

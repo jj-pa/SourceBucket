@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
+import { searchReducer } from './containers/Search/reducer';
 
 const reducers = {
   // ...reducers
+  search: searchReducer,
 };
 
 function createRootReducer() {

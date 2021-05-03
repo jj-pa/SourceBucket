@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Search } from '../containers/Search/Search';
 
 type Props = {};
 
@@ -8,6 +9,7 @@ const Navigator: FC<Props> = () => {
     <Router>
       <Switch>
         <Route path="/" render={() => <div>Hello jeongjin</div>} />
+        <Route path="/search" component={Search} />
       </Switch>
     </Router>
   );
