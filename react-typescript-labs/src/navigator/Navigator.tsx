@@ -8,7 +8,7 @@ const Navigator: FC<Props> = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" render={() => <div>Hello jeongjin</div>} />
+        <Route path="/" render={() => <div>Hello jeongjin</div>} exact />
         <Route path="/search" component={Search} />
       </Switch>
     </Router>
