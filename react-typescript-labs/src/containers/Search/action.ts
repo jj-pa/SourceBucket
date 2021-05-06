@@ -13,3 +13,5 @@ export const getResultsSuccess = createAction<Search>(
 export const getResultsError = createAction<CustomError>(
   SearchActionTypes.GET_RESULTS_ERROR
 );
+
+export const resetResults = createAction(SearchActionTypes.RESET_RESULTS);
