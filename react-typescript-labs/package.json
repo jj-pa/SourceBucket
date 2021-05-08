@@ -19,6 +19,7 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scrollspy": "^3.4.3",
+    "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
     "redux-form": "^8.3.7",
     "redux-injectors": "^1.3.0",

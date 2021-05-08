@@ -42,9 +42,11 @@ const SearchInput: FC<Props> = (props: Props) => {
     setSearchQueryLimit(25);
   }, []);
 
+  // @ts-ignore
+  // @ts-ignore
   return (
     <div className="search-input-container">
-      {/*Logo*/}
+      {/*@ts-ignore*/}
       <Avatar image={logo} size="xlarge" shape="circle" />
       {/*InputGroup*/}
       <div className="p-grid p-fluid">

@@ -13,6 +13,7 @@ export interface SearchResults {
   children: {
     kind: string;
     data: Result;
+    length: number;
   };
   before?: any;
 }
