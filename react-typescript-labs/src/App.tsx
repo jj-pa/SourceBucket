@@ -3,6 +3,9 @@ import { Provider } from 'react-redux';
 import { ApplicationState, configureAppStore } from './store';
 import { Navigator } from './navigator/Navigator';
 import { searchInitialState } from './containers/Search/reducer';
+import PrimeReact from 'primereact/api';
+
+PrimeReact.ripple = true;
 
 const initialState: ApplicationState = {
   // ... initial state of each chunk/feature
