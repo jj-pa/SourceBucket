@@ -9,5 +9,8 @@ data class Role(
     @Column(name = "role_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val roleId: Long,
-    val roleName: String
-)
+    val roleName: String,
+
+    override val createdBy: String,
+    override val lastModifiedBy: String,
+): Base()
