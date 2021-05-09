@@ -3,6 +3,8 @@ package com.site.labs.controller
 import com.site.labs.model.Gadget
 import com.site.labs.repository.GadgetRepository
 import com.site.labs.service.GadgetService
+import io.swagger.annotations.Api
+import io.swagger.annotations.ApiOperation
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
@@ -11,6 +13,7 @@ import org.springframework.util.ObjectUtils
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.util.UriComponentsBuilder
 
+@Api(description = "Gadget", tags = ["Gadget"])
 @RestController
 class GadgetController {
 
@@ -20,6 +23,7 @@ class GadgetController {
     @Autowired
     private lateinit var gadgetService: GadgetService
 
+    @ApiOperation("Gadget 전체 조회")
     @GetMapping("/gadgets")
     fun fetchGadgets(): ResponseEntity<List<Gadget>> {
         return ResponseEntity
