@@ -1,4 +1,4 @@
-package com.site.labs.service
+package com.site.labs.service.gadget
 
 import com.site.labs.model.Gadget
 import com.site.labs.repository.GadgetRepository
@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service
 import javax.transaction.Transactional
 
 @Service
-class GadgetServiceImpl constructor(@Autowired private val gadgetRepository: GadgetRepository) : GadgetService {
+class GadgetServiceImpl constructor(
+    @Autowired private val gadgetRepository: GadgetRepository) : GadgetService {
+
     override fun getAllGadgets(): List<Gadget>? =
         gadgetRepository.findAllBy()
 

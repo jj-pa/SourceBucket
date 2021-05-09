@@ -1,4 +1,4 @@
-package com.site.labs.service
+package com.site.labs.service.gadget
 
 import com.site.labs.model.Gadget
 import org.springframework.stereotype.Service
