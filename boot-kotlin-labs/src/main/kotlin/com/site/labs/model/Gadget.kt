@@ -9,9 +9,9 @@ data class Gadget(
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    val gadgetId : Long,
-    val gadgetName : String,
-    val gadgetCategory: String?,
-    val gadgetAvailability: Boolean = true,
-    val gadgetPrice : Double
+    val gadgetId : Long? = null,
+    var gadgetName : String? = null,
+    var gadgetCategory: String? = null,
+    var gadgetAvailability: Boolean = true,
+    var gadgetPrice : Double? = 0.0
 )

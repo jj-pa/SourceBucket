@@ -8,6 +8,10 @@ plugins {
     kotlin("plugin.jpa") version "1.4.32"
 }
 
+noArg {
+    annotation("javax.persistence.Entity")
+}
+
 group = "com.site"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -32,6 +36,7 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation(kotlin("test"))
 }
 
 tasks.withType<KotlinCompile> {
