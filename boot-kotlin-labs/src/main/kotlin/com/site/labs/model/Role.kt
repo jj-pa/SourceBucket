@@ -5,12 +5,14 @@ import javax.persistence.*
 @Entity
 @Table(name = "ROLE")
 data class Role(
+
     @Id
     @Column(name = "role_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val roleId: Long,
-    val roleName: String,
+    val roleId: Long? = null,
 
-    override val createdBy: String,
-    override val lastModifiedBy: String,
+    var roleName: String? = null,
+
+    override var createdBy: String = "",
+    override var lastModifiedBy: String = "",
 ): Base()
