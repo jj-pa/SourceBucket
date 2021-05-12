@@ -1,29 +1,45 @@
 package com.site.labs.repository
 
 import com.site.labs.model.Gadget
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.junit.jupiter.SpringExtension
+import javax.persistence.EntityManager
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 
-@DataJpaTest(showSql = true)
-class GadgetRepositoryTests @Autowired constructor (
-    private val entityManager: TestEntityManager,
-    private val gadgetRepository: GadgetRepository
-) {
+@ExtendWith(SpringExtension::class)
+@SpringBootTest
+class GadgetRepositoryTests {
+
+    @Autowired
+    private lateinit var gadgetRepository: GadgetRepository
+
+    @Autowired
+    private lateinit var entityManager: EntityManager
+
+    @BeforeEach
+    fun setUp() {
+        gadgetRepository.save(Gadget("MyGadget", "Testing", false, 1500.0))
+    }
+
     @Test
-    fun testSaveNewGadget() {
-        val gadget = Gadget()
-        gadget.gadgetName = "MyGadget"
-        gadget.gadgetCategory = "Testing"
-        gadget.gadgetAvailability = false
-        gadget.gadgetPrice = 1500.0
+    fun `Gadget 찾기`() {
+        println("----- Gadget 찾기 -----")
 
-        entityManager.persist(gadget)
+        //given
+        val name = "MyGadget"
+        entityManager.clear() //영속성 컨텍스트 클리어
 
-        val repositoryGadget: Gadget? = gadgetRepository.findByGadgetName("MyGadget")
+        //when
+        val gadget: Gadget? = gadgetRepository.findByGadgetName("MyGadget")
 
-        assertEquals("MyGadget", repositoryGadget?.gadgetName)
+        //then
+        assertNotNull(gadget)
+        assertEquals(name, gadget.gadgetName)
+        println("----- Gadget 찾기 -----")
     }
 }

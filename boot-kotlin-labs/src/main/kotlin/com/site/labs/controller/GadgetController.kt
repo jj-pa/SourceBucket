@@ -68,14 +68,12 @@ class GadgetController {
     fun updateGadgetById(@PathVariable("id") gadgetId: Long,
         @RequestBody gadget: Gadget): ResponseEntity<Gadget> {
         return gadgetRepository.findById(gadgetId).map {
-            gadgetDetils ->
-                val updatedGadget: Gadget = gadgetDetils.copy(
-                    gadgetCategory = gadget.gadgetCategory,
-                    gadgetName = gadget.gadgetName,
-                    gadgetPrice = gadget.gadgetPrice,
-                    gadgetAvailability = gadget.gadgetAvailability
-                )
-                ResponseEntity(gadgetRepository.save(updatedGadget), HttpStatus.OK)
+            gadgetDetails ->
+                gadgetDetails.gadgetCategory = gadget.gadgetCategory
+                gadgetDetails.gadgetName = gadget.gadgetName
+                gadgetDetails.gadgetPrice = gadget.gadgetPrice
+                gadgetDetails.gadgetAvailability = gadget.gadgetAvailability
+                ResponseEntity(gadgetRepository.save(gadgetDetails), HttpStatus.OK)
         }.orElse(ResponseEntity<Gadget>(HttpStatus.INTERNAL_SERVER_ERROR))
     }
 

@@ -8,6 +8,10 @@ plugins {
     kotlin("plugin.jpa") version "1.4.32"
 }
 
+allOpen {
+    annotation("javax.persistence.Entity")
+}
+
 noArg {
     annotation("javax.persistence.Entity")
 }
