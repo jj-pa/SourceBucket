@@ -24,4 +24,18 @@ yarn add -D eslint-config-prettier eslint-plugin-prettier
 + eslint-config-prettier: Prettier와 충돌되는 ESLint 규칙들을 무시하는 설정
 + eslint-plugin-prettier: Prettier를 사용해 포맷팅을 하도록 ESLint 규칙을 추가하는 플러그인
 
-test...
+
+## Front-end
+
+* react
+* react-router-dom
+* react-scroll
+* react-redux
+* redux
+* redux-saga
+* @reduxjs/toolkit
+* axios
+* dotenv
+* primereact
+* primeicons
+* styled-components
