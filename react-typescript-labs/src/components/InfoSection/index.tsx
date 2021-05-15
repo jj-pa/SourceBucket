@@ -14,7 +14,6 @@ import {
   TopLine,
 } from './InfoElements';
 import { Button } from '../ButtonElements';
-import test from '../../assets/images/svg-1.svg';
 
 type Props = {
   id: string;
@@ -29,11 +28,12 @@ type Props = {
   heading: string;
   topLine: string;
   headLine: string;
+  primary: boolean;
+  image: any;
 };
 
 const InfoSection: FC<Props> = ({
   id,
-  heading,
   lightBg,
   imgStart,
   topLine,
@@ -44,6 +44,10 @@ const InfoSection: FC<Props> = ({
   buttonLabel,
   img,
   alt,
+  primary,
+  dark,
+  dark2,
+  image,
 }: Props) => {
   return (
     <>
@@ -53,16 +57,28 @@ const InfoSection: FC<Props> = ({
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{heading}</Heading>
+                <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button to="home">{buttonLabel}</Button>
+                  <Button
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
+                  >
+                    {buttonLabel}
+                  </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={test} alt={alt} />
+                <Img src={image} alt={alt} />
               </ImgWrap>
             </Column2>
           </InfoRow>
