@@ -78,7 +78,7 @@ const InfoSection: FC<Props> = ({
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={image} alt={alt} />
+                <Img src={img} alt={alt} />
               </ImgWrap>
             </Column2>
           </InfoRow>
