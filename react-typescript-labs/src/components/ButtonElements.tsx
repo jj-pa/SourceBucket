@@ -6,6 +6,7 @@ type Props = {
   big: boolean;
   dark: any;
   fontBig: boolean;
+  exact: string;
 };
 
 export const Button = styled(Link)<Props>`

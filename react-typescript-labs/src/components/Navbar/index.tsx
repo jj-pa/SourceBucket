@@ -99,24 +99,10 @@ const Navbar: FC<Props> = ({ toggle }: Props) => {
               </NavItem>
             </NavMenu>
             <NavBtn>
+              <NavBtnLink to="dashboard">App</NavBtnLink>
               <NavBtnLink to="signin">Sign In</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
-          {/*<NavLink to="/">
-          <h1>Logo</h1>
-        </NavLink>
-        <Bars />
-        <NavMenu>
-          <NavLink to="/search">Search</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/contact-us">Contact</NavLink>
-          <NavLink to="/sign-up">Sign Up</NavLink>
-        </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/signin">App</NavBtnLink>
-        </NavBtn>
-      </Nav>
-      */}
         </Nav>
       </IconContext.Provider>
     </>
