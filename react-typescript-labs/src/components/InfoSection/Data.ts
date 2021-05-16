@@ -1,3 +1,7 @@
+import svg1 from '../../assets/images/svg-1.svg';
+import svg2 from '../../assets/images/svg-2.svg';
+import svg3 from '../../assets/images/svg-3.svg';
+
 export const homeObjOne = {
   id: 'about',
   lightBg: false,
@@ -11,7 +15,7 @@ export const homeObjOne = {
     'charged any fees.',
   buttonLabel: 'Get started',
   imgStart: false,
-  img: require('../../assets/images/svg-1.svg'),
+  img: svg1,
   alt: 'Car',
   dark: true,
   primary: true,
@@ -30,7 +34,7 @@ export const homeObjTwo = {
     'you need is an internet connection and a phone or computer.',
   buttonLabel: 'Learn More',
   imgStart: true,
-  img: require('../../assets/images/svg-2.svg'),
+  img: svg2,
   alt: 'Piggybank',
   dark: false,
   primary: false,
@@ -49,7 +53,7 @@ export const homeObjThree = {
     "you need to do is add your information and you're ready to go.",
   buttonLabel: 'Start Now',
   imgStart: false,
-  img: require('../../assets/images/svg-3.svg'),
+  img: svg3,
   alt: 'Paper',
   dark: false,
   primary: false,
