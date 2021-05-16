@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import {
   ArrowForward,
   ArrowRight,
@@ -27,8 +27,8 @@ const HeroSection: FC<Props> = (props: Props) => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Virtual Banking Made Easy</HeroH1>
-        <HeroP>
+        <HeroH1 className="title sticky-elem">Virtual Banking Made Easy</HeroH1>
+        <HeroP className="desc sticky-elem">
           Sign up for a new account today and receive $250 in credit towards
           your next payment.
         </HeroP>
@@ -44,6 +44,7 @@ const HeroSection: FC<Props> = (props: Props) => {
             spy={true}
             exact="true"
             offset={-80}
+            className="signup-btn sticky-elem"
           >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>

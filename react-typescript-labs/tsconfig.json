@@ -15,5 +15,5 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src", "custom.d.ts"] // 사용할 폴더 및 파일
+  "include": ["src", "custom.d.ts", "Scroll.ts"] // 사용할 폴더 및 파일
 }
