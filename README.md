@@ -1,4 +1,4 @@
-# Labs
+# SourceBucket
 
 여러 정보들을 관리하기 위한 목적의 서비스.
 
