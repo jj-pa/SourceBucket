@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-.sticky-elem {
+/*.sticky-elem {
   display: none;
   position: fixed;
   left: 50%;
@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
 
 #show-scene-0 .sticky-elem {
   display: block;
-}
+}*/
 `;
 
 export default GlobalStyles;

@@ -25,13 +25,11 @@ type Props = {
   buttonLabel: string;
   img: any;
   alt: string;
-  heading: string;
   topLine: string;
   headLine: string;
   primary: boolean;
   image: any;
   dark: boolean;
-  dark2: boolean;
 };
 
 const InfoSection: FC<Props> = ({
@@ -48,7 +46,6 @@ const InfoSection: FC<Props> = ({
   alt,
   primary,
   dark,
-  dark2,
   image,
 }: Props) => {
   return (

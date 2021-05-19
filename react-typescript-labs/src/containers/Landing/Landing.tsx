@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import './styles.css';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
@@ -14,8 +14,7 @@ import test2 from '../../assets/images/svg-2.svg';
 import test3 from '../../assets/images/svg-3.svg';
 import Services from '../../components/Services';
 import Footer from '../../components/Footer';
-import { scrollFunction } from './Scroll';
-import styled from 'styled-components';
+// import { scrollFunction } from './Scroll';
 
 type Props = {};
 
@@ -25,9 +24,9 @@ const Landing: FC<Props> = (props: Props) => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     scrollFunction();
-  }, []);
+  }, []);*/
 
   return (
     <>

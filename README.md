@@ -39,3 +39,7 @@ yarn add -D eslint-config-prettier eslint-plugin-prettier
 * primereact
 * primeicons
 * styled-components
+* @emotion/core
+* @emotion/styled
+* node-sass
+
