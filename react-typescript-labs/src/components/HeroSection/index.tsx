@@ -38,7 +38,7 @@ const HeroSection: FC<Props> = (props: Props) => {
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
-            dark="true"
+            dark={true}
             smooth={true}
             duration={500}
             spy={true}

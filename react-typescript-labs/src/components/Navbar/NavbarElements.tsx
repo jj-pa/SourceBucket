@@ -79,7 +79,11 @@ export const NavItem = styled.li<Props>`
   height: 80px;
 `;
 
-export const NavLinks = styled(LinkS)<Props>`
+type NavLinksProps = {
+  exact: string;
+};
+
+export const NavLinks = styled(LinkS)<NavLinksProps>`
   color: #fff;
   display: flex;
   align-items: center;

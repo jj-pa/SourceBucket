@@ -30,6 +30,8 @@ type Props = {
   headLine: string;
   primary: boolean;
   image: any;
+  dark: boolean;
+  dark2: boolean;
 };
 
 const InfoSection: FC<Props> = ({
@@ -68,8 +70,7 @@ const InfoSection: FC<Props> = ({
                     exact="true"
                     offset={-80}
                     primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
+                    dark={dark ? true : false}
                   >
                     {buttonLabel}
                   </Button>

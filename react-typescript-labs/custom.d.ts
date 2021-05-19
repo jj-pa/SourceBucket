@@ -1,5 +1,11 @@
 declare module '*.svg' {
   import { ReactElement, SVGProps } from 'react';
-  const content: (props: SVGProps<SVGElement>) => ReactElement;
-  export default content;
+  export const ReactComponent: React.SFC<SVGProps<SVGSVGElement>>;
+  const src: string;
+  export default src;
+}
+
+declare module '*.mp4' {
+  const src: string;
+  export default src;
 }

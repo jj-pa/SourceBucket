@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ImgHTMLAttributes } from 'react';
 
 type Props = {};
 
@@ -57,7 +58,9 @@ export const ServicesCard = styled.div<Props>`
   }
 `;
 
-export const ServicesIcon = styled.img<Props>`
+interface ServicesIconProps extends ImgHTMLAttributes<HTMLImageElement> {}
+
+export const ServicesIcon = styled.img<ServicesIconProps>`
   height: 160px;
   width: 160px;
   margin-bottom: 10px;
