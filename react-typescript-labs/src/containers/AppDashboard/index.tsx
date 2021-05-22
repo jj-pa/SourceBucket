@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './AppDashboard.scss';
-import { App, Header } from './AppDashboard.styles';
+import { App } from './AppDashboard.styles';
 
 import DashboardSidebar from '../../components/DashboardSidebar';
 import DashboardMainView from '../../components/DashboardMainView/DashboardMainView';
@@ -11,6 +11,7 @@ import iconBlog from '../../assets/images/icon-blog.svg';
 import iconDestinations from '../../assets/images/icon-destinations.svg';
 import iconServices from '../../assets/images/icon-services.svg';
 import iconContacts from '../../assets/images/icon-contacts.svg';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 type Props = {};
 
@@ -57,8 +58,10 @@ const AppDashboard: FC<Props> = (props: Props) => {
 
   return (
     <App>
-      <DashboardSidebar sidebarHeader={sidebarHeader} menuItems={menuItems} />
-      <DashboardMainView />
+      <Router>
+        <DashboardSidebar sidebarHeader={sidebarHeader} menuItems={menuItems} />
+        <DashboardMainView />
+      </Router>
     </App>
   );
 };

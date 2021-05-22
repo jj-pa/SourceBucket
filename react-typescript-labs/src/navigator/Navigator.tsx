@@ -4,7 +4,6 @@ import { Search } from '../containers/Search/Search';
 import { Landing } from '../containers/Landing/Landing';
 import SigninPage from '../containers/Signin/SigninPage';
 import AppDashboard from '../containers/AppDashboard';
-import Home from '../components/DashboardMainView/Home';
 import About from '../components/DashboardMainView/About';
 import Destinations from '../components/DashboardMainView/Destinations';
 import Blog from '../components/DashboardMainView/Blog';
@@ -17,7 +16,6 @@ const Navigator: FC<Props> = () => {
   return (
     <Router>
       <Switch>
-        {/*<Route path="/" render={() => <div>Hello jeongjin</div>} exact />*/}
         <Route exact path="/" component={Landing} />
         <Route path="/search" component={Search} />
         <Route path="/signin" component={SigninPage} />

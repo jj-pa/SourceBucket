@@ -122,20 +122,20 @@ const DashboardSidebar: FC<Props> = (props: Props) => {
 
     return (
       <ItemContainer key={index}>
-        {/*<Link to={item.to} style={{ textDecoration: 'none' }}>*/}
-        <MenuItem
-          selected={isItemSelected}
-          onClick={() => handleMenuItemClick(item.name, index)}
-          isSidebarOpen={isSidebarOpen}
-          isOpen={isOpen}
-        >
-          <Icon src={item.icon} isSidebarOpen={isSidebarOpen} />
-          <Text isSidebarOpen={isSidebarOpen}>{item.name}</Text>
-          {hasSubmenus && isSidebarOpen && (
-            <DropdownIcon selected={isItemSelected} isOpen={isOpen} />
-          )}
-        </MenuItem>
-        {/*</Link>*/}
+        <Link to={item.to} style={{ textDecoration: 'none' }}>
+          <MenuItem
+            selected={isItemSelected}
+            onClick={() => handleMenuItemClick(item.name, index)}
+            isSidebarOpen={isSidebarOpen}
+            isOpen={isOpen}
+          >
+            <Icon src={item.icon} isSidebarOpen={isSidebarOpen} />
+            <Text isSidebarOpen={isSidebarOpen}>{item.name}</Text>
+            {hasSubmenus && isSidebarOpen && (
+              <DropdownIcon selected={isItemSelected} isOpen={isOpen} />
+            )}
+          </MenuItem>
+        </Link>
         {/*Display submenus if they exist*/}
         <AnimatePresence>
           {hasSubmenus && isOpen && (

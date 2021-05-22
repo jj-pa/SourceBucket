@@ -4,7 +4,7 @@ import { ApplicationState, configureAppStore } from './store';
 import { Navigator } from './navigator/Navigator';
 import { searchInitialState } from './containers/Search/reducer';
 import PrimeReact from 'primereact/api';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AppDashboard from './containers/AppDashboard';
 
 PrimeReact.ripple = true;
 
@@ -19,10 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
-          <Navigator />
-          {/*<Landing />*/}
-        </Router>
+        <Navigator />
       </Provider>
     );
   }
