@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import './styles.css';
 import Navbar from '../../components/Navbar';
-import Sidebar from '../../components/Sidebar';
+import LandingMenu from '../../components/LandingMenu';
 import HeroSection from '../../components/HeroSection';
 import InfoSection from '../../components/InfoSection';
 import {
@@ -30,7 +30,7 @@ const Landing: FC<Props> = (props: Props) => {
 
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <LandingMenu isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
       <InfoSection {...homeObjOne} image={test1} />

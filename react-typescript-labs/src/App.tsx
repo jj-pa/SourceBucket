@@ -5,12 +5,6 @@ import { Navigator } from './navigator/Navigator';
 import { searchInitialState } from './containers/Search/reducer';
 import PrimeReact from 'primereact/api';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Navbar from './components/Navbar';
-import { Landing } from './containers/Landing/Landing';
-import { Home } from './containers/Home/Home';
-import { Search } from './containers/Search/Search';
-import SigninPage from './containers/Signin/SigninPage';
 
 PrimeReact.ripple = true;
 

@@ -2,26 +2,26 @@ import React, { FC } from 'react';
 import {
   CloseIcon,
   Icon,
-  SidebarContainer,
+  LandingMenuContainer,
   SidebarLink,
   SidebarMenu,
   SidebarRoute,
-  SidebarWrapper,
+  LandingMenuWrapper,
   SideBtnWrap,
-} from './SidebarElements';
+} from './LandingMenuElements';
 
 type Props = {
   isOpen: boolean;
   toggle: any;
 };
 
-const Sidebar: FC<Props> = ({ isOpen, toggle }: Props) => {
+const LandingMenu: FC<Props> = ({ isOpen, toggle }: Props) => {
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <LandingMenuContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
-      <SidebarWrapper>
+      <LandingMenuWrapper>
         <SidebarMenu>
           <SidebarLink to="about" onClick={toggle}>
             About
@@ -39,9 +39,9 @@ const Sidebar: FC<Props> = ({ isOpen, toggle }: Props) => {
         <SideBtnWrap>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>
         </SideBtnWrap>
-      </SidebarWrapper>
-    </SidebarContainer>
+      </LandingMenuWrapper>
+    </LandingMenuContainer>
   );
 };
 
-export default Sidebar;
+export default LandingMenu;

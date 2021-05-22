@@ -3,11 +3,11 @@ import { FaTimes } from 'react-icons/fa';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-type SidebarContainerProps = {
+type LandingMenuContainerProps = {
   isOpen: Boolean;
 };
 
-export const SidebarContainer = styled.div<SidebarContainerProps>`
+export const LandingMenuContainer = styled.div<LandingMenuContainerProps>`
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -37,7 +37,7 @@ export const Icon = styled.div<Props>`
   outline: none;
 `;
 
-export const SidebarWrapper = styled.div<Props>`
+export const LandingMenuWrapper = styled.div<Props>`
   color: #fff;
 `;
 
