@@ -14,6 +14,7 @@ import test2 from '../../assets/images/svg-2.svg';
 import test3 from '../../assets/images/svg-3.svg';
 import Services from '../../components/Services';
 import Footer from '../../components/Footer';
+import Team from '../../components/Team';
 // import { scrollFunction } from './Scroll';
 
 type Props = {};
@@ -36,6 +37,7 @@ const Landing: FC<Props> = (props: Props) => {
       <InfoSection {...homeObjOne} image={test1} />
       <InfoSection {...homeObjTwo} image={test2} />
       <Services />
+      <Team />
       <InfoSection {...homeObjThree} image={test3} />
       <Footer />
     </>
