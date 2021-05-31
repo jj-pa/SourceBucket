@@ -4,7 +4,7 @@ import {
   SidebarHeader,
   MenuItemContainer,
   MenuItem,
-  Icon,
+  ImageIcon,
   Text,
   TogglerContainer,
   Toggler,
@@ -129,7 +129,7 @@ const DashboardSidebar: FC<Props> = (props: Props) => {
             isSidebarOpen={isSidebarOpen}
             isOpen={isOpen}
           >
-            <Icon src={item.icon} isSidebarOpen={isSidebarOpen} />
+            <ImageIcon src={item.icon} isSidebarOpen={isSidebarOpen} />
             <Text isSidebarOpen={isSidebarOpen}>{item.name}</Text>
             {hasSubmenus && isSidebarOpen && (
               <DropdownIcon selected={isItemSelected} isOpen={isOpen} />

@@ -17,8 +17,8 @@ type Props = {};
 
 const AppDashboard: FC<Props> = (props: Props) => {
   const sidebarHeader = {
-    fullName: 'parkjeongjin',
-    shortName: 'jj-pa',
+    fullName: 'SourceBucket',
+    shortName: 'Bucket',
   };
   const menuItems = [
     { name: 'Home', icon: iconHome, to: '/dashboard', subMenuItems: [] },
