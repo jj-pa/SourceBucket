@@ -94,11 +94,11 @@ export const SubMenuItemContainer = styled.div<SubMenuItemContainerProps>`
   `};
 `;
 export const SubmenuItem = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
   color: rgba(19, 15, 64);
-
-  &:hover {
-    color: rgba(255, 255, 255);
-  }
+  cursor: pointer;
 `;
 
 // Dropdown icon
@@ -128,7 +128,7 @@ export const TogglerContainer = styled.div`
 `;
 
 export const Toggler = styled.div`
-  height: 40px;
+  height: 30px;
   cursor: pointer;
   position: relative; // horizontal lines
 
