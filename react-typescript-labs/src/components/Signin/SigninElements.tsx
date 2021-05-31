@@ -12,11 +12,6 @@ export const Container = styled.div<Props>`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient(
-    108deg,
-    rgba(249, 168, 90, 1) 0%,
-    rgba(249, 168, 38, 1) 100%
-  );
 `;
 
 export const FormWrap = styled.div<Props>`
@@ -31,15 +26,13 @@ export const FormWrap = styled.div<Props>`
 `;
 
 export const Icon = styled(Link)<Props>`
-  margin-left: 32px;
   margin-top: 32px;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-weight: 700;
   font-size: 32px;
 
   @media screen and (max-width: 480px) {
-    margin-left: 16px;
     margin-top: 8px;
   }
 `;
