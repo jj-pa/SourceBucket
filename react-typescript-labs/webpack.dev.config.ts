@@ -34,7 +34,7 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.(css|scss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
       },
       {
         // write image files under 10k to inline or copy image files over 10k
