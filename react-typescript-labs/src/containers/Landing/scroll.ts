@@ -1,3 +1,4 @@
+// @ts-nocheck
 export const scrollFunction = () => {
   let yOffset = 0; //window.pageYOffset 대신 쓸 변수
   let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
