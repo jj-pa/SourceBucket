@@ -71,10 +71,11 @@ const Footer: FC<Props> = (props: Props) => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
-              jeongjinpark
+              SourceBucket
             </SocialLogo>
             <WebsiteRights>
-              jeongjinpark © {new Date().getFullYear()} All rights reserved.
+              SourceBucket Team © {new Date().getFullYear()} All rights
+              reserved.
             </WebsiteRights>
             <SocialIcons>
               <SocialIconLink href="/" target="_blank" aria-label="Facebook">

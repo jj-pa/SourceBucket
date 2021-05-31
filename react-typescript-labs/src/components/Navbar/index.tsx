@@ -43,7 +43,7 @@ const Navbar: FC<Props> = ({ toggle }: Props) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              jeongjin
+              SourceBucket
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />

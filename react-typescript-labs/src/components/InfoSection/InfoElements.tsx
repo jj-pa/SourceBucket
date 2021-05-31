@@ -16,10 +16,14 @@ export const InfoContainer = styled.div<ContainerProps>`
 }
 `;
 
-export const InfoWrapper = styled.div<Props>`
+type InfoWrapperProps = {
+  height?: number;
+};
+
+export const InfoWrapper = styled.div<InfoWrapperProps>`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: ${({ height }) => (height ? `${height}px` : '860px')};
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -60,16 +64,15 @@ export const Column2 = styled.div<Props>`
 export const TextWrapper = styled.div<Props>`
   max-width: 540px;
   padding-top: 0;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 `;
 
 export const TopLine = styled.p<Props>`
-  color: #01bf71;
+  color: #f9a826;
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
-  text-transform: uppercase;
   margin-bottom: 16px;
 `;
 
@@ -107,7 +110,7 @@ export const BtnWrap = styled.div<Props>`
 `;
 
 export const ImgWrap = styled.div<Props>`
-  max-width: 555px;
+  max-width: 500px;
   height: 100%;
 `;
 

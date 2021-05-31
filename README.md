@@ -43,3 +43,8 @@ yarn add -D eslint-config-prettier eslint-plugin-prettier
 * @emotion/styled
 * node-sass
 
+## Sources
+
+1. video - pexels.com
+2. svg - undraw
+

@@ -11,7 +11,7 @@ import {
   VideoBg,
 } from './HeroElements';
 import Video from '../../assets/videos/video.mp4';
-import { Button } from '../ButtonElements';
+import { ScrollButton } from '../ButtonElements';
 
 type Props = {};
 
@@ -27,13 +27,12 @@ const HeroSection: FC<Props> = (props: Props) => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroH1 className="title sticky-elem">Virtual Banking Made Easy</HeroH1>
+        <HeroH1 className="title sticky-elem">Memories and Records</HeroH1>
         <HeroP className="desc sticky-elem">
-          Sign up for a new account today and receive $250 in credit towards
-          your next payment.
+          This is a repository for storing various sources.
         </HeroP>
         <HeroBtnWrapper>
-          <Button
+          <ScrollButton
             to="signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
@@ -47,7 +46,7 @@ const HeroSection: FC<Props> = (props: Props) => {
             className="signup-btn sticky-elem"
           >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          </ScrollButton>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>

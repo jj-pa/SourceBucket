@@ -6,12 +6,9 @@ import HeroSection from '../../components/HeroSection';
 import InfoSection from '../../components/InfoSection';
 import {
   homeObjOne,
-  homeObjTwo,
+  landingReact,
   homeObjThree,
 } from '../../components/InfoSection/Data';
-import test1 from '../../assets/images/svg-1.svg';
-import test2 from '../../assets/images/svg-2.svg';
-import test3 from '../../assets/images/svg-3.svg';
 import Services from '../../components/Services';
 import Footer from '../../components/Footer';
 import Team from '../../components/Team';
@@ -34,11 +31,11 @@ const Landing: FC<Props> = (props: Props) => {
       <LandingMenu isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection {...homeObjOne} image={test1} />
-      <InfoSection {...homeObjTwo} image={test2} />
+      <InfoSection {...homeObjOne} />
+      <InfoSection {...landingReact} />
       <Services />
-      <Team />
-      <InfoSection {...homeObjThree} image={test3} />
+      {/*<Team />*/}
+      <InfoSection {...homeObjThree} />
       <Footer />
     </>
   );

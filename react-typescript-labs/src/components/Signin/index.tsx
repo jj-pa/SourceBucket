@@ -19,7 +19,7 @@ const SignIn: FC<Props> = (props: Props) => {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/">jeongjinpark</Icon>
+          <Icon to="/">SourceBucket</Icon>
           <FormContent>
             <Form action="#">
               <FormH1>Sign in to your account</FormH1>

@@ -13,7 +13,7 @@ import {
   TextWrapper,
   TopLine,
 } from './InfoElements';
-import { Button } from '../ButtonElements';
+import { HtmlButton, ScrollButton } from '../ButtonElements';
 
 type Props = {
   id: string;
@@ -23,13 +23,14 @@ type Props = {
   darkText: boolean;
   description: string;
   buttonLabel: string;
+  buttonUrl?: string;
   img: any;
   alt: string;
   topLine: string;
   headLine: string;
   primary: boolean;
-  image: any;
   dark: boolean;
+  height?: number;
 };
 
 const InfoSection: FC<Props> = ({
@@ -42,16 +43,17 @@ const InfoSection: FC<Props> = ({
   darkText,
   description,
   buttonLabel,
+  buttonUrl,
   img,
   alt,
   primary,
   dark,
-  image,
+  height,
 }: Props) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
-        <InfoWrapper>
+        <InfoWrapper height={height}>
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
@@ -59,18 +61,29 @@ const InfoSection: FC<Props> = ({
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? true : false}
-                  >
-                    {buttonLabel}
-                  </Button>
+                  {buttonUrl ? (
+                    <HtmlButton
+                      href={buttonUrl}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? true : false}
+                      target="_blank"
+                    >
+                      {buttonLabel}
+                    </HtmlButton>
+                  ) : (
+                    <ScrollButton
+                      to="home"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                      primary={primary ? 1 : 0}
+                      dark={dark ? true : false}
+                    >
+                      {buttonLabel}
+                    </ScrollButton>
+                  )}
                 </BtnWrap>
               </TextWrapper>
             </Column1>
