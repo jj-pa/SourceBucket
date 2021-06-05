@@ -9,6 +9,7 @@ import Destinations from '../components/DashboardMainView/Destinations';
 import Blog from '../components/DashboardMainView/Blog';
 import Services from '../components/DashboardMainView/Services';
 import Contacts from '../components/DashboardMainView/Contacts';
+import Country from '../components/DashboardMainView/Destinations/Country/Country';
 
 type Props = {};
 
@@ -17,19 +18,10 @@ const Navigator: FC<Props> = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route path="/search" component={Search} />
-        <Route path="/signin" component={SigninPage} />
-        <Route path="/dashboard" component={AppDashboard} />
-        <Route path="/dashboard/about" component={About} />
-        <Route path="/dashboard/destinations" component={Destinations} />
-        <Route
-          exact
-          path="/dashboard/destinations/:county"
-          component={Destinations}
-        />
-        <Route path="/dashboard/blog" component={Blog} />
-        <Route path="/dashboard/services" component={Services} />
-        <Route path="/dashboard/contacts" component={Contacts} />
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/signin" component={SigninPage} />
+        <Route exact path="/dashboard" component={AppDashboard} />
+        <Route exact path="/dashboard/:menu" component={AppDashboard} />
       </Switch>
     </Router>
   );

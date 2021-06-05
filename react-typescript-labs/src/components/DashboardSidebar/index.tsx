@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useLayoutEffect, useState } from 'react';
 import {
   SidebarContainer,
   SidebarHeader,
@@ -30,7 +30,7 @@ type MenuItemStructure = {
 
 type SubMenuObject = {
   isOpen: boolean;
-  selected: any;
+  selected: number;
 };
 
 type Props = {
@@ -39,6 +39,7 @@ type Props = {
     shortName: string;
   };
   menuItems: MenuItemStructure[];
+  initialMenuName?: string;
 };
 
 const DashboardSidebar: FC<Props> = (props: Props) => {
@@ -48,6 +49,7 @@ const DashboardSidebar: FC<Props> = (props: Props) => {
       shortName: '',
     },
     menuItems = [],
+    initialMenuName = '',
   } = props;
 
   // state
@@ -56,8 +58,15 @@ const DashboardSidebar: FC<Props> = (props: Props) => {
   const [header, setHeader] = useState(sidebarHeader.fullName);
   const [subMenusStates, setSubmenus] = useState({});
 
-  // effects
+  // layoutEffects
+  useLayoutEffect(() => {
+    initialMenuName &&
+      setSelectedMenuItem(
+        initialMenuName.charAt(0).toUpperCase() + initialMenuName.slice(1)
+      );
+  }, []);
 
+  // effects
   // Update of header state
   useEffect(() => {
     isSidebarOpen
@@ -102,7 +111,23 @@ const DashboardSidebar: FC<Props> = (props: Props) => {
       // @ts-ignore
       subMenusCopy[index]['isOpen'] = !subMenusStates[index]['isOpen'];
       setSubmenus(subMenusCopy);
+    } else {
+      for (let item in subMenusStates) {
+        subMenusCopy[item]['isOpen'] = false;
+        subMenusCopy[item]['selected'] = null;
+      }
+      setSubmenus(subMenusCopy);
     }
+  };
+
+  const handleSubMenuItemClick = (
+    menuItemIdx: number,
+    subMenuItemIdx: number
+  ) => {
+    const subMenusCopy = JSON.parse(JSON.stringify(subMenusStates));
+
+    subMenusCopy[menuItemIdx]['selected'] = subMenuItemIdx;
+    setSubmenus(subMenusCopy);
   };
 
   const menuItemJSX = menuItems.map((item, index) => {
@@ -114,8 +139,21 @@ const DashboardSidebar: FC<Props> = (props: Props) => {
 
     const subMenusJSX = item.subMenuItems.map(
       (subMenuItem, subMenuItemIndex) => {
+        const isSubmenuItemSelected = // @ts-ignore
+          subMenusStates[index]?.selected === subMenuItemIndex;
         return (
-          <SubmenuItem key={subMenuItemIndex}>{subMenuItem.name}</SubmenuItem>
+          <Link
+            to={`${item.to}${subMenuItem.to}`}
+            style={{ textDecoration: 'none' }}
+            key={subMenuItemIndex}
+          >
+            <SubmenuItem
+              onClick={() => handleSubMenuItemClick(index, subMenuItemIndex)}
+              selected={isSubmenuItemSelected}
+            >
+              {subMenuItem.name}
+            </SubmenuItem>
+          </Link>
         );
       }
     );

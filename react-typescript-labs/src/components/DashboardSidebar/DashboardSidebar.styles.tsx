@@ -47,7 +47,7 @@ export const MenuItem = styled.div<MenuItemProps>`
   color: ${(p) => (p.selected ? 'rgba(255, 255, 255)' : 'rgba(19, 15, 64)')};
   white-space: nowrap;
   position: relative; // Dropdown icon
-  transition: 0.2s ease-in all;
+  transition: 0.05s ease-in all;
   padding: 10px 20px;
   margin: ${(p) => (p.isSidebarOpen ? '0 3px' : '0px')};
 `;
@@ -93,11 +93,14 @@ export const SubMenuItemContainer = styled.div<SubMenuItemContainerProps>`
     text-align: center;
   `};
 `;
-export const SubmenuItem = styled.div`
+type SubmenuItemProps = {
+  selected: boolean;
+};
+export const SubmenuItem = styled.div<SubmenuItemProps>`
   height: 40px;
   display: flex;
   align-items: center;
-  color: rgba(19, 15, 64);
+  color: ${(p) => (p.selected ? 'rgba(0, 128, 255)' : 'rgba(19, 15, 64)')};
   cursor: pointer;
 `;
 

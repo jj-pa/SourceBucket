@@ -13,9 +13,17 @@ import iconServices from '../../assets/images/icon-services.svg';
 import iconContacts from '../../assets/images/icon-contacts.svg';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-type Props = {};
+type Props = {
+  match: {
+    params: {
+      menu?: string;
+    };
+  };
+};
 
 const AppDashboard: FC<Props> = (props: Props) => {
+  const urlMenuName = props.match.params.menu;
+
   const sidebarHeader = {
     fullName: 'SourceBucket',
     shortName: 'Bucket',
@@ -33,12 +41,12 @@ const AppDashboard: FC<Props> = (props: Props) => {
       icon: iconDestinations,
       to: '/dashboard/destinations',
       subMenuItems: [
-        { name: 'Canada', to: '/dashboard/canada' },
-        { name: 'Brazil', to: '/dashboard/brazil' },
-        { name: 'India', to: '/dashboard/india' },
-        { name: 'Australia', to: '/dashboard/australia' },
-        { name: 'Kenya', to: '/dashboard/kenya' },
-        { name: 'Moldova', to: '/dashboard/moldova' },
+        { name: 'Canada', to: '/canada' },
+        { name: 'Brazil', to: '/brazil' },
+        { name: 'India', to: '/india' },
+        { name: 'Australia', to: '/australia' },
+        { name: 'Kenya', to: '/kenya' },
+        { name: 'Moldova', to: '/moldova' },
       ],
     },
     { name: 'Blog', icon: iconBlog, to: '/dashboard/blog', subMenuItems: [] },
@@ -59,7 +67,11 @@ const AppDashboard: FC<Props> = (props: Props) => {
   return (
     <App>
       <Router>
-        <DashboardSidebar sidebarHeader={sidebarHeader} menuItems={menuItems} />
+        <DashboardSidebar
+          sidebarHeader={sidebarHeader}
+          menuItems={menuItems}
+          initialMenuName={urlMenuName}
+        />
         <DashboardMainView />
       </Router>
     </App>

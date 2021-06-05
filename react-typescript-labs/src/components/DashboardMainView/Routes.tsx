@@ -7,6 +7,7 @@ import Destinations from './Destinations';
 import Blog from './Blog';
 import Services from './Services';
 import Contacts from './Contacts';
+import Country from './Destinations/Country/Country';
 
 type Props = {};
 
@@ -14,16 +15,16 @@ const Routes: FC<Props> = (props: Props) => {
   return (
     <Switch>
       <Route exact path="/dashboard" component={Home} />
-      <Route path="/dashboard/about" component={About} />
-      <Route path="/dashboard/destinations" component={Destinations} />
+      <Route exact path="/dashboard/about" component={About} />
+      <Route exact path="/dashboard/destinations" component={Destinations} />
       <Route
         exact
-        path="/dashboard/destinations/:county"
-        component={Destinations}
+        path="/dashboard/destinations/:country"
+        component={Country}
       />
-      <Route path="/dashboard/blog" component={Blog} />
-      <Route path="/dashboard/services" component={Services} />
-      <Route path="/dashboard/contacts" component={Contacts} />
+      <Route exact path="/dashboard/blog" component={Blog} />
+      <Route exact path="/dashboard/services" component={Services} />
+      <Route exact path="/dashboard/contacts" component={Contacts} />
     </Switch>
   );
 };
