@@ -37,7 +37,7 @@ const AppDashboard: FC<Props> = (props: Props) => {
       subMenuItems: [],
     },
     {
-      name: 'Destinations',
+      name: 'Back-end',
       icon: iconDestinations,
       to: '/dashboard/destinations',
       subMenuItems: [
